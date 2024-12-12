@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --main-color: #000000;
+    --second-color: #0096c7;
+    --second-text-color: #0077b6;
+    --bg-color: #f0f8ff;
+    --bg2-color: #d8e4f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* 10px */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    /* background-image: url('/img/bg2.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+body:after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.8;
+    z-index: -1;
+    background: #023e8a;
+    background: -webkit-linear-gradient(to right, #72becc, #023e8a);
+    background: linear-gradient(to right, #72becc, #023e8a);
+}
+
+/* BEM */
+
+.bg {
+    background-color: var(--bg-color);
+}
+
+.bg2 {
+    background-color: var(--bg2-color);
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+
+h4 {
+    font-size: 2.4rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+h2 {
+    color: var(--second-color);
+}
+
+h4,
+h5 {
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+h1,
+h4,
+h5 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h5 {
+    margin: 1.5rem 0;
+}
+
+.boxed-page {
+    margin: 6rem 7rem;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+        0 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+/* NAVBAR Section */
+
+#navbar {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#navbar .left-nav img {
+    border-radius: 5px;
+    margin-left: 1.5rem;
+}
+
+#navbar .right-nav ul {
+    padding: 3rem;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#navbar .nav-link {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+#navbar-nav:hover li a {
+    opacity: 0.5;
+}
+
+#navbar-nav:hover li a:hover {
+    opacity: 1;
+}
+
+/* HERO Section */
+#hero {
+    height: 50rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    height: 30rem;
+    border-radius: 2rem;
+}
+
+.hero-p {
+    width: 30%;
+    margin-left: 1rem;
+    margin-top: 4rem;
+}
+
+#empty {
+    background: none;
+    height: 20rem;
+}
+
+/* SERVICES Section */
+#services {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-grid {
+    margin-top: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 310px);
+    gap: 2.5rem;
+}
+
+.services-grid .service {
+    height: 25rem;
+    width: 31rem;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+        0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service .icon {
+    border: 4px solid var(--second-text-color);
+    padding: 1.3rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.service .icon:hover {
+    border: 4px solid #95d3f5ba;
+    background-color: var(--second-text-color);
+    color: var(--bg-color);
+}
+
+.service p {
+    text-align: center;
+}
+
+/* SKILLS Section */
+#skills, #proj, #testi {
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 5em;
+    margin-top: 1.5em;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill i {
+    margin: 1em 0;
+    color: var(--second-text-color);
+}
+
+/* PROJECT Section */
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 2em;
+    margin-top: 1.5em;
+}
+
+.project {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    transform: transform 0.9s ease;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+.project img {
+    border-radius: 6px;
+}
+
+.project button a {
+    text-decoration: none;
+    color: var(--second-text-color);
+    font-weight: 600;
+}
+
+.project button {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 2px solid var(--second-text-color);
+    background-color: var(--bg-color);
+    transition: all 0.7s ease-in;
+}
+
+.project button:hover {
+    border: 2px solid #95d3f5ba;
+    background-color: var(--second-text-color);
+}
+
+.project button a:hover {
+    color: var(--bg-color);
+}
+
+/* TESTIMONIAL Section */
+#testi-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 80%);
+}
+
+.testimonial {
+    width: 70rem;
+    border: 1px solid var(--second-text-color);
+    border-radius: 6px;
+    background-color: #0076b64a;
+    padding: 1rem;
+    margin: 1em 0;
+    display: flex;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    margin-left: -6rem;
+}
+
+.testimonial p {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.testimonial p .name {
+    color: var(--second-text-color);
+    font-weight: 600;
+}
+
+/* FOOTER Section */
+#footer {
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: var(--bg-color);
+}
+
+#footer .left-footer {
+    width: 50%;
+}
+
+#footer .right-footer .contact {
+    height: 10rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#footer .right-footer .contact .social {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer .right-footer .contact .social div a  {
+    color: var(--main-color);
+}
+
+/* Media Queries */
+@media (max-width:768px) {
+    .boxed-page {
+        width: 80%;
+    }
+    #navbar .right-nav ul {
+        padding: 3rem;
+        width: 400px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(1, 310px);
+    }
+    .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(4, auto);
+    }
+    .testimonial {
+        width: 50rem;
+        border: 1px solid var(--second-text-color);
+        border-radius: 6px;
+        background-color: #0076b64a;
+        padding: 1rem;
+        margin: 1em 0;
+        display: flex;
+    }
+}
+
+
+@media (max-width:480px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+    .img-container img {
+        height: 20rem;
+        border-radius: 2rem;
+        margin-left: 1rem;
+    }
+    .hero-p {
+        width: 50%;
+        margin-left: 1rem;
+        margin-top: -20rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+
+    .services-grid .service {
+        height: 25rem;
+        width: 26rem;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    .testimonial {
+        width: 30rem;
+    }
+    
+    .testimonial img {
+        height: 70px;
+        border-radius: 50%;
+        margin-left: -4rem;
+    }
+    #footer .left-footer {
+        width: 100%;
+    }
+
+    #footer .right-footer  {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 454px){
+    body {
+        font-size: 1rem;
+    }
+    #navbar .right-nav ul {
+        width: 400px;
+        justify-content:space-around;
+    }
+    .services-grid {
+        margin-left: 5rem;
+    }
+    .project, .project img {
+        width: 25rem;
+    }
+    .testimonial {
+        width: 25rem;
+    }
+}
