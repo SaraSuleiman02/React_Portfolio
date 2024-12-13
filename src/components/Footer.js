@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <div id="footer">
+      <div id="footer" style={{backgroundColor: '#d8e4f0'}}>
         <div className="left-footer">
           <h2>Who am I ?</h2>
           <h3>I'm Sara Suleiman</h3>
@@ -17,17 +17,8 @@ function Footer() {
         </div>
 
         <div className="right-footer">
-          <h2>Contact ME!</h2>
+          <h2>Follow ME!</h2>
           <div className="contact">
-            <div className="email-phone">
-              <p>
-                <i className="fa-regular fa-envelope fa-xl"></i>
-                &nbsp; sarasuleiman1234@gmail.com
-                <br />
-                <i className="fa-solid fa-phone fa-xl"></i>
-                &nbsp; +962795894363
-              </p>
-            </div>
             <div className="social">
               <div>
                 <a
