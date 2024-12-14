@@ -23,7 +23,6 @@ html {
 
 body {
   display: flex;
-  /* background-image: url('/img/bg2.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -112,17 +111,17 @@ h5 {
 }
 
 /* NAVBAR Section */
-
 #navbar {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 1rem;
 }
 
 #navbar .left-nav img {
@@ -130,18 +129,24 @@ h5 {
   margin-left: 1.5rem;
 }
 
+#navbar .right-nav {
+  display: flex;
+  align-items: center;
+}
+
 #navbar .right-nav ul {
-  padding: 3rem;
-  width: 500px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 #navbar .nav-link {
   text-decoration: none;
   color: var(--main-color);
   font-weight: 500;
+  padding: 0.5rem 1rem;
   transition: 0.3s ease;
 }
 
@@ -151,6 +156,59 @@ h5 {
 
 #navbar-nav:hover li a:hover {
   opacity: 1;
+}
+
+/* Burger menu styles */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger-menu .line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-color);
+}
+
+/* Media queries for responsive navbar */
+@media screen and (max-width: 768px) {
+  #navbar .right-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--bg-color);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  #navbar .right-nav.active {
+    display: flex;
+  }
+
+  #navbar .right-nav ul {
+    flex-direction: column;
+  }
+
+  #navbar .right-nav li {
+    margin: 1rem 0;
+  }
+
+  #navbar .nav-link {
+    padding: 1rem;
+  }
+
+  .burger-menu {
+    display: flex;
+    margin-right: 1.5rem;
+  }
 }
 
 /* HERO Section */
@@ -462,10 +520,6 @@ h5 {
   .boxed-page {
     width: 80%;
   }
-  #navbar .right-nav ul {
-    padding: 3rem;
-    width: 400px;
-  }
   .services-grid {
     grid-template-columns: repeat(1, 310px);
   }
@@ -501,7 +555,7 @@ h5 {
   .hero-p {
     width: 50%;
     margin-left: 1rem;
-    margin-top: -20rem;
+    margin-top: -5rem;
   }
   p {
     font-size: 1.3rem;
@@ -516,13 +570,19 @@ h5 {
     grid-template-rows: repeat(3, auto);
   }
   .testimonial {
-    width: 30rem;
+    width: 45rem;
   }
 
   .testimonial img {
     height: 70px;
     border-radius: 50%;
     margin-left: -4rem;
+  }
+  .info-item i {
+    margin-left: 30px;
+  }
+  .contact-form {
+    margin-right: 30px;
   }
   #footer .left-footer {
     width: 100%;
@@ -537,9 +597,8 @@ h5 {
   body {
     font-size: 1rem;
   }
-  #navbar .right-nav ul {
-    width: 400px;
-    justify-content: space-around;
+  #navbar .right-nav li {
+    font-size: medium;
   }
   .services-grid {
     margin-left: 5rem;
@@ -549,6 +608,8 @@ h5 {
     width: 25rem;
   }
   .testimonial {
-    width: 25rem;
+    width: 40rem;
   }
+
+  
 }

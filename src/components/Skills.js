@@ -6,12 +6,12 @@ function Skills() {
       <h2>Skills</h2>
       <div className="skills-grid">
         <div className="skill">
-          <i class="fa-brands fa-html5 fa-2xl"></i>
+          <i className="fa-brands fa-html5 fa-2xl"></i>
           <h4>HTML</h4>
         </div>
 
         <div className="skill">
-          <i class="fa-brands fa-css3-alt fa-2xl"></i>
+          <i className="fa-brands fa-css3-alt fa-2xl"></i>
           <h4>CSS</h4>
         </div>
 
@@ -33,12 +33,12 @@ function Skills() {
         </div>
 
         <div className="skill">
-          <i class="fa-brands fa-laravel fa-2xl"></i>
+          <i className="fa-brands fa-laravel fa-2xl"></i>
           <h4>Laravel</h4>
         </div>
 
         <div className="skill">
-          <i class="fa-brands fa-react fa-2xl"></i>
+          <i className="fa-brands fa-react fa-2xl"></i>
           <h4>React</h4>
         </div>
       </div>
